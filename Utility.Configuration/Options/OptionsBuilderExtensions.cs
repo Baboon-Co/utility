@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 
-namespace Utility.Options;
+namespace Utility.Configuration.Options;
 
 public static class OptionsBuilderExtensions
 {

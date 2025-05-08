@@ -1,0 +1,37 @@
+﻿name: Publish Utility.Configuration
+
+on:
+  push:
+    branches: [ master ]
+    paths:
+      - 'src/Utility.Configuration/**'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Bump version
+        id: versioning
+        uses: nsmolianitski/semver-action@v1.1.2
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          additional_name: utility-configuration
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 9.x
+
+      - name: Restore & Pack
+        run: |
+          dotnet restore src/Utility.Configuration/Utility.Configuration.csproj /p:Version=${{ steps.versioning.outputs.version }}
+          dotnet pack src/Utility.Configuration/Utility.Configuration.csproj -c Release -o artifacts /p:Version=${{ steps.versioning.outputs.version }}
+
+      - name: Push to GitHub Packages
+        env:
+          NUGET_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: dotnet nuget push artifacts/*.nupkg --source "https://nuget.pkg.github.com/baboon-co/index.json" --api-key ${NUGET_AUTH_TOKEN}

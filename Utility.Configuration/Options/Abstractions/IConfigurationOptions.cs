@@ -1,4 +1,4 @@
-﻿namespace Utility.Options.Abstractions;
+﻿namespace Utility.Configuration.Options.Abstractions;
 
 public interface IConfigurationOptions
 {

@@ -4,16 +4,14 @@
         <TargetFramework>net9.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <PackageId>Utility.Grpc</PackageId>
+        <Version>$(Version)</Version>
     </PropertyGroup>
 
     <ItemGroup>
         <PackageReference Include="FluentResults" Version="3.16.0"/>
-        <PackageReference Include="FluentValidation" Version="12.0.0" />
         <PackageReference Include="Grpc.Core.Api" Version="2.71.0"/>
         <PackageReference Include="Grpc.StatusProto" Version="2.71.0"/>
-        <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.4"/>
-        <PackageReference Include="Microsoft.Extensions.Options" Version="9.0.4"/>
-        <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="9.0.4"/>
     </ItemGroup>
 
 </Project>
