@@ -18,7 +18,7 @@ jobs:
 
       - name: Bump version
         id: versioning
-        uses: nsmolianitski/semver-action@v1.1.5
+        uses: nsmolianitski/semver-action@v1.1.6
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           additional_name: utility-configuration
