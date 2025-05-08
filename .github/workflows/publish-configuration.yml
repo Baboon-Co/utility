@@ -30,8 +30,8 @@ jobs:
 
       - name: Restore & Pack
         run: |
-          dotnet restore src/Utility.Configuration/Utility.Configuration.csproj /p:Version=${{ steps.versioning.outputs.version }}
-          dotnet pack src/Utility.Configuration/Utility.Configuration.csproj -c Release -o artifacts /p:Version=${{ steps.versioning.outputs.version }}
+          dotnet restore Utility.Configuration/Utility.Configuration.csproj /p:Version=${{ steps.versioning.outputs.version }}
+          dotnet pack Utility.Configuration/Utility.Configuration.csproj -c Release -o artifacts /p:Version=${{ steps.versioning.outputs.version }}
 
       - name: Push to GitHub Packages
         env:
