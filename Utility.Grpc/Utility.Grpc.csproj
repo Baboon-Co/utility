@@ -4,7 +4,7 @@
         <TargetFramework>net9.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
-        <PackageId>Utility.Grpc</PackageId>
+        <PackageId>Baboon-Co.Utility.Grpc</PackageId>
         <Version>$(Version)</Version>
     </PropertyGroup>
 
