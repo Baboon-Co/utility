@@ -6,6 +6,8 @@ on:
     paths:
       - 'Utility.Configuration/**'
 
+  workflow_dispatch:
+
 jobs:
   publish:
     runs-on: ubuntu-latest
