@@ -9,13 +9,10 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="BaboonCo.Utility.Result" Version="0.0.2" />
         <PackageReference Include="FluentResults" Version="3.16.0"/>
         <PackageReference Include="Grpc.Core.Api" Version="2.71.0"/>
         <PackageReference Include="Grpc.StatusProto" Version="2.71.0"/>
-    </ItemGroup>
-
-    <ItemGroup>
-      <ProjectReference Include="..\Utility.Result\Utility.Result.csproj" />
     </ItemGroup>
 
 </Project>
