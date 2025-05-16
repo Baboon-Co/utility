@@ -1,10 +1,10 @@
-﻿name: Publish Utility.Grpc
+name: Publish Utility.Result
 
 on:
   push:
     branches: [ master ]
     paths:
-      - 'Utility.Grpc/**'
+      - 'Utility.Result/**'
 
   workflow_dispatch:
 
@@ -21,7 +21,7 @@ jobs:
         uses: nsmolianitski/semver-action@v1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          additional_name: utility-grpc
+          additional_name: utility-result
 
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
@@ -30,8 +30,8 @@ jobs:
 
       - name: Restore & Pack
         run: |
-          dotnet restore Utility.Grpc/Utility.Grpc.csproj /p:Version=${{ steps.versioning.outputs.new_version_raw }}
-          dotnet pack Utility.Grpc/Utility.Grpc.csproj -c Release -o artifacts /p:Version=${{ steps.versioning.outputs.new_version_raw }}
+          dotnet restore Utility.Result/Utility.Result.csproj /p:Version=${{ steps.versioning.outputs.new_version_raw }}
+          dotnet pack Utility.Result/Utility.Result.csproj -c Release -o artifacts /p:Version=${{ steps.versioning.outputs.new_version_raw }}
 
       - name: Push to GitHub Packages
         env:

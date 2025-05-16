@@ -1,6 +1,6 @@
 ﻿using FluentResults;
 
-namespace Utility.Grpc.ResultErrors;
+namespace Utility.Result.ResultErrors;
 
 public class FieldError(string field, string code, string message) : Error(message)
 {
