@@ -11,7 +11,7 @@ namespace Utility.Grpc;
 
 public static class GrpcHelper
 {
-    public static RpcException CreateRpcException(Result result)
+    public static RpcException CreateRpcException<T>(Result<T> result)
     {
         if (result.IsSuccess)
             throw new InvalidOperationException("Result is not failed.");
@@ -36,7 +36,7 @@ public static class GrpcHelper
         return errorDetail.ToRpcException();
     }
 
-    private static RepeatedField<FieldViolation> ResultToFieldViolations(Result result)
+    private static RepeatedField<FieldViolation> ResultToFieldViolations<T>(Result<T> result)
     {
         return new RepeatedField<FieldViolation>
         {
