@@ -15,7 +15,7 @@ public static class GrpcClientHelper
         if (status is null)
             throw new InvalidOperationException("[gRPC] Could not parse gRPC status because it is null.");
 
-        var grpcResultError = new RequestError(e.Message, ToRequestErrorType(status.Code));
+        var grpcResultError = new RequestError(status.Message, ToRequestErrorType(status.Code));
         var errors = new List<Error> {grpcResultError};
 
         if (status.Code == (int) StatusCode.InvalidArgument)
