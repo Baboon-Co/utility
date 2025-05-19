@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Publish Package
-        uses: ./.github/actions/publish-nuget-package
+        uses: Baboon-Co/utility/Actions/publish-nuget-package@master
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           project-name: Utility.Configuration
