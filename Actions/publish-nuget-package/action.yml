@@ -35,6 +35,7 @@ runs:
     - name: Restore & Pack
       shell: bash
       run: |
+        dotnet nuget add source "https://nuget.pkg.github.com/baboon-co/index.json" -n "Baboon and Co" --username ${{ github.actor }} --password ${{ inputs.github-token }} --store-password-in-clear-text
         dotnet restore ${{ inputs.project-name }}/${{ inputs.project-name }}.csproj /p:Version=${{ steps.versioning.outputs.new_version_raw }}
         dotnet pack ${{ inputs.project-name }}/${{ inputs.project-name }}.csproj -c Release -o artifacts /p:Version=${{ steps.versioning.outputs.new_version_raw }}
 
