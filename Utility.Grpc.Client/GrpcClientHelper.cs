@@ -9,7 +9,7 @@ namespace BaboonCo.Utility.Grpc.Client;
 
 public static class GrpcClientHelper
 {
-    private static FluentResults.Result ParseGrpcErrors(RpcException e)
+    public static FluentResults.Result ParseGrpcErrors(RpcException e)
     {
         var status = e.GetRpcStatus();
         if (status is null)
