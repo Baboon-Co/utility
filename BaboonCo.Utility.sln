@@ -7,7 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionFiles", "SolutionFi
 		.github\workflows\publish-result.yml = .github\workflows\publish-result.yml
 		.github\workflows\publish-grpc-client.yml = .github\workflows\publish-grpc-client.yml
 		.github\workflows\publish-grpc-server.yml = .github\workflows\publish-grpc-server.yml
-		.github\actions\publish-nuget-package\action.yml = .github\actions\publish-nuget-package\action.yml
+		Actions\publish-nuget-package\action.yml = Actions\publish-nuget-package\action.yml
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utility.Configuration", "Utility.Configuration\Utility.Configuration.csproj", "{E0993C16-C37B-459A-ADFD-E940A9D236B1}"

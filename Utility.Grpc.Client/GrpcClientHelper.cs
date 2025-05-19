@@ -1,15 +1,15 @@
 ﻿using BaboonCo.Utility.Grpc.Client.Errors;
+using BaboonCo.Utility.Result.ResultErrors;
+using BaboonCo.Utility.Result.ResultErrors.Enums;
 using FluentResults;
 using Google.Rpc;
 using Grpc.Core;
-using Utility.Result.ResultErrors;
-using Utility.Result.ResultErrors.Enums;
 
 namespace BaboonCo.Utility.Grpc.Client;
 
 public static class GrpcClientHelper
 {
-    private static Result ParseGrpcErrors(RpcException e)
+    private static FluentResults.Result ParseGrpcErrors(RpcException e)
     {
         var status = e.GetRpcStatus();
         if (status is null)
@@ -26,7 +26,7 @@ public static class GrpcClientHelper
             errors.AddRange(validationErrors);
         }
 
-        return Result.Fail(errors);
+        return FluentResults.Result.Fail(errors);
     }
 
     private static RequestErrorType ToRequestErrorType(int code)

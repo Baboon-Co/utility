@@ -1,10 +1,10 @@
-﻿using FluentResults;
+﻿using BaboonCo.Utility.Result.ResultErrors;
+using BaboonCo.Utility.Result.ResultErrors.Enums;
+using FluentResults;
 using Google.Protobuf.Collections;
 using Google.Protobuf.WellKnownTypes;
 using Google.Rpc;
 using Grpc.Core;
-using Utility.Result.ResultErrors;
-using Utility.Result.ResultErrors.Enums;
 using Status = Google.Rpc.Status;
 using FieldViolation = Google.Rpc.BadRequest.Types.FieldViolation;
 
