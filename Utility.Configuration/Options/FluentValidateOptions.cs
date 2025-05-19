@@ -2,7 +2,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 
-namespace Utility.Configuration.Options;
+namespace BaboonCo.Utility.Configuration.Options;
 
 public class FluentValidateOptions<TOptions>(IServiceProvider serviceProvider, string? name)
     : IValidateOptions<TOptions> where TOptions : class

@@ -12,28 +12,8 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Publish Package
+        uses: ./.github/actions/publish-nuget-package
         with:
-          fetch-depth: 0
-
-      - name: Bump version
-        id: versioning
-        uses: nsmolianitski/semver-action@v1
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          additional_name: utility-result
-
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v4
-        with:
-          dotnet-version: 9.x
-
-      - name: Restore & Pack
-        run: |
-          dotnet restore Utility.Result/Utility.Result.csproj /p:Version=${{ steps.versioning.outputs.new_version_raw }}
-          dotnet pack Utility.Result/Utility.Result.csproj -c Release -o artifacts /p:Version=${{ steps.versioning.outputs.new_version_raw }}
-
-      - name: Push to GitHub Packages
-        env:
-          NUGET_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: dotnet nuget push artifacts/*.nupkg --source "https://nuget.pkg.github.com/baboon-co/index.json" --api-key ${NUGET_AUTH_TOKEN}
+          project_name: Utility.Result
+          version-tag-name: utility-result

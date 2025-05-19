@@ -6,6 +6,8 @@
         <Nullable>enable</Nullable>
         <PackageId>BaboonCo.Utility.Configuration</PackageId>
         <Version>$(Version)</Version>
+        <AssemblyName>BaboonCo.Utility.Configuration</AssemblyName>
+        <RootNamespace>BaboonCo.Utility.Configuration</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>

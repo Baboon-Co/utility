@@ -1,10 +1,10 @@
-﻿name: Publish Utility.Configuration
+﻿name: Publish Utility.Grpc.Server
 
 on:
   push:
     branches: [ master ]
     paths:
-      - 'Utility.Configuration/**'
+      - 'Utility.Grpc.Server/**'
 
   workflow_dispatch:
 
@@ -15,5 +15,5 @@ jobs:
       - name: Publish Package
         uses: ./.github/actions/publish-nuget-package
         with:
-          project_name: Utility.Configuration
-          version-tag-name: utility-configuration
+          project_name: Utility.Grpc.Server
+          version-tag-name: utility-grpc-server

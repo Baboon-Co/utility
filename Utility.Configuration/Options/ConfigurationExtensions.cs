@@ -1,7 +1,7 @@
-﻿using Microsoft.Extensions.Configuration;
-using Utility.Configuration.Options.Abstractions;
+﻿using BaboonCo.Utility.Configuration.Options.Abstractions;
+using Microsoft.Extensions.Configuration;
 
-namespace Utility.Configuration.Options;
+namespace BaboonCo.Utility.Configuration.Options;
 
 public static class ConfigurationExtensions
 {

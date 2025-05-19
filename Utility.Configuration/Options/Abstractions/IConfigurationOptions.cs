@@ -1,4 +1,4 @@
-﻿namespace Utility.Configuration.Options.Abstractions;
+﻿namespace BaboonCo.Utility.Configuration.Options.Abstractions;
 
 public interface IConfigurationOptions
 {

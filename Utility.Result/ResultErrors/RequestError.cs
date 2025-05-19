@@ -1,7 +1,7 @@
-﻿using FluentResults;
-using Utility.Result.ResultErrors.Enums;
+﻿using BaboonCo.Utility.Result.ResultErrors.Enums;
+using FluentResults;
 
-namespace Utility.Result.ResultErrors;
+namespace BaboonCo.Utility.Result.ResultErrors;
 
 public class RequestError(string reason, RequestErrorType type) : Error(reason)
 {

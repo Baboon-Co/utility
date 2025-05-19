@@ -4,15 +4,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionFiles", "SolutionFi
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
 		.github\workflows\publish-configuration.yml = .github\workflows\publish-configuration.yml
-		.github\workflows\publish-grpc.yml = .github\workflows\publish-grpc.yml
 		.github\workflows\publish-result.yml = .github\workflows\publish-result.yml
+		.github\workflows\publish-grpc-client.yml = .github\workflows\publish-grpc-client.yml
+		.github\workflows\publish-grpc-server.yml = .github\workflows\publish-grpc-server.yml
+		.github\actions\publish-nuget-package.yml = .github\actions\publish-nuget-package.yml
 	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utility.Grpc", "Utility.Grpc\Utility.Grpc.csproj", "{3EB3F277-0752-4770-A3EA-0406934400DF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utility.Configuration", "Utility.Configuration\Utility.Configuration.csproj", "{E0993C16-C37B-459A-ADFD-E940A9D236B1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utility.Result", "Utility.Result\Utility.Result.csproj", "{023C6152-42D4-4B8D-8057-1099AC8B61E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utility.Grpc.Client", "Utility.Grpc.Client\Utility.Grpc.Client.csproj", "{88A67ACB-19AF-4B27-BCC8-4C63EAEE2CC1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utility.Grpc.Server", "Utility.Grpc.Server\Utility.Grpc.Server.csproj", "{DAE6E4F4-636F-4236-B7F6-02A974D57E60}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,10 +24,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3EB3F277-0752-4770-A3EA-0406934400DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3EB3F277-0752-4770-A3EA-0406934400DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3EB3F277-0752-4770-A3EA-0406934400DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3EB3F277-0752-4770-A3EA-0406934400DF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E0993C16-C37B-459A-ADFD-E940A9D236B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E0993C16-C37B-459A-ADFD-E940A9D236B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E0993C16-C37B-459A-ADFD-E940A9D236B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -32,5 +32,13 @@ Global
 		{023C6152-42D4-4B8D-8057-1099AC8B61E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{023C6152-42D4-4B8D-8057-1099AC8B61E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{023C6152-42D4-4B8D-8057-1099AC8B61E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88A67ACB-19AF-4B27-BCC8-4C63EAEE2CC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88A67ACB-19AF-4B27-BCC8-4C63EAEE2CC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88A67ACB-19AF-4B27-BCC8-4C63EAEE2CC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88A67ACB-19AF-4B27-BCC8-4C63EAEE2CC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAE6E4F4-636F-4236-B7F6-02A974D57E60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAE6E4F4-636F-4236-B7F6-02A974D57E60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAE6E4F4-636F-4236-B7F6-02A974D57E60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAE6E4F4-636F-4236-B7F6-02A974D57E60}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

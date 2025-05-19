@@ -1,4 +1,4 @@
-﻿namespace Utility.Result.ResultErrors.Enums;
+﻿namespace BaboonCo.Utility.Result.ResultErrors.Enums;
 
 public enum RequestErrorType
 {

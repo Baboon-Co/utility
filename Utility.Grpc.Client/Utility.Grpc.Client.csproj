@@ -4,14 +4,17 @@
         <TargetFramework>net9.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
-        <PackageId>BaboonCo.Utility.Grpc</PackageId>
+        <PackageId>BaboonCo.Utility.Grpc.Client</PackageId>
         <Version>$(Version)</Version>
+        <AssemblyName>BaboonCo.Utility.Grpc.Client</AssemblyName>
+        <RootNamespace>BaboonCo.Utility.Grpc.Client</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
         <PackageReference Include="BaboonCo.Utility.Result" Version="0.0.2" />
-        <PackageReference Include="FluentResults" Version="3.16.0"/>
-        <PackageReference Include="Grpc.Core.Api" Version="2.71.0"/>
+        <PackageReference Include="FluentResults" Version="3.16.0" />
+        <PackageReference Include="Grpc.Net.Client" Version="2.71.0"/>
+        <PackageReference Include="Grpc.Net.ClientFactory" Version="2.71.0"/>
         <PackageReference Include="Grpc.StatusProto" Version="2.71.0"/>
     </ItemGroup>
 

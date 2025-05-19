@@ -1,7 +1,7 @@
 ﻿using System.Text;
 using Google.Rpc;
 
-namespace Utility.Grpc;
+namespace BaboonCo.Utility.Grpc.Server;
 
 public static class GrpcsBadRequestExtensions
 {
