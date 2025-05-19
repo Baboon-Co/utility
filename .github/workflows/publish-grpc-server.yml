@@ -16,5 +16,5 @@ jobs:
         uses: ./.github/actions/publish-nuget-package
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          project_name: Utility.Grpc.Server
+          project-name: Utility.Grpc.Server
           version-tag-name: utility-grpc-server

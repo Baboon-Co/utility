@@ -16,5 +16,5 @@ jobs:
         uses: Baboon-Co/utility/Actions/publish-nuget-package@master
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          project_name: Utility.Result
+          project-name: Utility.Result
           version-tag-name: utility-result
