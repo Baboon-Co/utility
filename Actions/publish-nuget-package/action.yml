@@ -2,6 +2,9 @@ name: 'Publish .NET Package'
 description: 'Build, version and publish .NET package to GitHub Packages'
 
 inputs:
+  github-token:
+    description: 'GitHub token'
+    required: true
   project-name:
     description: 'Project name'
     required: true
@@ -16,15 +19,13 @@ runs:
       uses: actions/checkout@v4
       with:
         fetch-depth: 0
-      shell: bash
 
     - name: Bump version
       id: versioning
       uses: nsmolianitski/semver-action@v1
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        github_token: ${{ inputs.github-token }}
         additional_name: ${{ inputs.version-tag-name }}
-      shell: bash
 
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
@@ -40,5 +41,5 @@ runs:
     - name: Push to GitHub Packages
       shell: bash
       env:
-        NUGET_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        NUGET_AUTH_TOKEN: ${{ inputs.github-token }}
       run: dotnet nuget push artifacts/*.nupkg --source "https://nuget.pkg.github.com/baboon-co/index.json" --api-key ${NUGET_AUTH_TOKEN}
