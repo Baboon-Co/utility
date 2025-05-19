@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Publish Package
-        uses: Baboon-Co/utility/publish-nuget-package@master
+        uses: Baboon-Co/utility/Actions/publish-nuget-package@master
         with:
           project_name: Utility.Result
           version-tag-name: utility-result
